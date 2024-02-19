@@ -16,25 +16,23 @@ int main() {
 	cout << "Please enter second number: ";
 	cin >> num2;
 
-	switch (op) {
-	case '+':
+	if (op == '+') {
 		cout << num1 << "+" << num2 << "=" << num1 + num2;
-		break;
-	case '-':
+	} else if (op == '-') {
 		cout << num1 << "-" << num2 << "=" << num1 - num2;
-		break;
-	case '*':
+	}
+	else if (op == '*') {
 		cout << num1 << "*" << num2 << "=" << num1 * num2;
-		break;
-	case '/':
+	}
+	else if (op == '/') {
 		if (num2 == 0) {
 			cout << "Error: Division by zero";
-		} else {
+		}
+		else {
 			cout << num1 << "/" << num2 << "=" << num1 / num2;
 		}
-		break;
-	default:
-		cout << "Error: Unsopported operator";
+	} else {
+	    cout << "Error: Unsopported operator";
 	}
 
 	return 0;
